@@ -1,4 +1,4 @@
-import elephant from "../images/elephant.jpeg";
+import elephant from "https://github.com/rapolurenu/lab-react-props-boilerplate/blob/main/src/images/elephant.jpeg?raw=true";
 const imgdata = [
   {
     id: 1,
