@@ -1,28 +1,23 @@
-import { Component } from "react";
-import "./App.css"
-import elephant from "./images/elephant.jpeg";
+import React, { Component } from 'react';
+import DataComponent from './components/DataComponent';
+import './App.css'; // Importing CSS file
 
-export default class AppClass extends Component{
-  // code here
-  render(){
-    const images = this.imageData();
-    return (
-      <div className="gallary">
-        <h2>Kalvium gallary</h2>
-        <div className="img_row">
-          {images.map(image => (
-              <img src={image.img} alt={`Image ${image.id}`} className="size"/>
-          ))}
-        </div>
-      </div>
-    );
-  }
+class AppClass extends Component {
+    render() {
+        const data = DataComponent();
+        return (
+            <div>
+                <h1 className="center">Kalvium gallary</h1>
+                <div className="grid-container">
+                    {data.map(item => (
+                        <div key={item.id} className="grid-item">
+                            <img src={item.img} alt={`Image ${item.id}`} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    }
 }
-class Props extends Component {
-  render() {
-    const { id, img } = this.img_Comp;
-    return (
-      <img key={id} src={img} alt={`Elephant ${id}`} />
-    );
-  }
-}
+
+export default AppClass;
