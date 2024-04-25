@@ -1,20 +1,14 @@
-/* add your styles here */
-.gallary {
-    padding: 29px;
+.center {
     text-align: center;
-    font-size: 30px;
 }
 
-.img_row {
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 6px;
-    justify-content: center; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    justify-content: center;
 }
 
-.size {
+.grid-item img {
     width: 100%; 
-    margin: 11px;
-    display:block;
 }
-
