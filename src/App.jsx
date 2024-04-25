@@ -1,23 +1,21 @@
-import './App.css';
-import elephant from "./images/elephant.jpeg";
+import React from 'react';
+import DataComponent from './components/DataComponent';
+import './App.css'; 
 
-function App() {
-  // code here
-  const images =imageData();
-  return(
-    <div className="gallary">
-      <h2>Kalvium gallary</h2>
-      <div className="img_row">
-        {images.map(image => (
-          <img src={image.img} alt={`Image ${image.id}`} className="size"/>
-        ))}
-      </div>
-    </div>
-  );
-}
-function Props(img_Comp) {
-  return (
-    <img key={img_Comp.id} src={img_Comp.img} alt={`Elephant ${img_Comp.id}`} />
-  );
-}
+const App = () => {
+    const data = DataComponent();
+    return (
+        <div>
+            <h1 className="center">Kalvium gallary</h1>
+            <div className="grid-container">
+                {data.map(item => (
+                    <div key={item.id} className="grid-item">
+                        <img src={item.img} alt={`Image ${item.id}`} />
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
 export default App;
