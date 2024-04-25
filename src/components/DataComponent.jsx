@@ -17,4 +17,4 @@ const imgdata = [
     img: elephant
   }
 ];
-export default data;
+export default imgdata;
