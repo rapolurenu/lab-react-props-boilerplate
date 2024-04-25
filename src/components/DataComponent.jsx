@@ -1,5 +1,5 @@
 import elephant from "../images/elephant.jpeg";
-const data = [
+const imgdata = [
   {
     id: 1,
     img: elephant
